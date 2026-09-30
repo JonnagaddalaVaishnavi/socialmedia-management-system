@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #eef2ff;
+}
+
+.post-page {
+  min-height: 100vh;
+  background: #eef2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.post-wrapper {
+  width: 100%;
+  max-width: 1050px;
+  background: white;
+  border-radius: 24px;
+  padding: 42px;
+  box-shadow: 0 18px 45px rgba(50, 50, 100, 0.09);
+}
+
+.post-top {
+  margin-bottom: 32px;
+}
+
+.post-top h1 {
+  color: #222;
+  font-size: 31px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.post-top p {
+  color: #777;
+  font-size: 15px;
+}
+
+.post-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+}
+
+.image-side {
+  background: #f8f8ff;
+  padding: 25px;
+  border-radius: 18px;
+}
+
+.image-side h2,
+.details-side h2 {
+  color: #292929;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.image-box {
+  width: 100%;
+  height: 330px;
+  background: white;
+  border: 1px dashed #c8c8d8;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.empty-image {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.empty-image p {
+  color: #555;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.empty-image span {
+  color: #999;
+  font-size: 13px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px;
+  background: white;
+  border: 1px solid #d2d2ed;
+  border-radius: 10px;
+  color: #5b5be7;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.upload-btn:hover {
+  background: #5b5be7;
+  color: white;
+  border-color: #5b5be7;
+}
+
+.upload-text {
+  text-align: center;
+  color: #5b5be7;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.details-side {
+  padding: 8px 0;
+}
+
+.details-side h2 {
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 23px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.post-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #d8d8df;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: white;
+  transition: 0.25s;
+}
+
+.post-input::placeholder,
+.post-textarea::placeholder {
+  color: #aaa;
+}
+
+.post-input:focus,
+.post-textarea:focus {
+  border-color: #5b5be7;
+  box-shadow: 0 0 0 3px rgba(91, 91, 231, 0.08);
+}
+
+.post-textarea {
+  width: 100%;
+  height: 190px;
+  padding: 14px 15px;
+  border: 1px solid #d8d8df;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  color: #333;
+  background: white;
+  transition: 0.25s;
+}
+
+.create-btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 3px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #5b5be7, #7658f5);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(91, 91, 231, 0.25);
+}
+
+@media (max-width: 850px) {
+  .post-page {
+    padding: 25px 15px;
+  }
+
+  .post-wrapper {
+    padding: 28px;
+  }
+
+  .post-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-wrapper {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .post-top h1 {
+    font-size: 25px;
+  }
+
+  .image-side {
+    padding: 18px;
+  }
+
+  .image-box {
+    height: 250px;
+  }
+}
